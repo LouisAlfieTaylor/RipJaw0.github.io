@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Game List</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <main>
+        <form action="https://webdevbasics.net/scripts/demo.php" method="post" onsubmit="return validateForm()">
+            <label for="fname">First Name:</label>
+            <input type="text" id="First Name" name="First Name" required>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="Last Name" name="Last Name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="Email" name="Email" required>
+            <label for="comments">Comments:</label>
+            <textarea id="Comments" name="Comments" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Louis Taylor</p>
+    </footer>
+    <script>
+        function validateForm() {
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var email = document.getElementById("email").value;
+            if (fname == "" || lname == "" || email == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
